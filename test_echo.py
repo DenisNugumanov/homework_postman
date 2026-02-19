@@ -21,7 +21,7 @@ class TestPostmanEchoAPI:
         response = requests.get(f"{BASE_URL}/get")
 
         # Проверяем статус код (в Postman видим 200 OK)
-        assert response.status_code == 200, f"Ожидался статус 200, получен {response.status_code}"
+        assert response.status_code == 400, f"Ожидался статус 200, получен {response.status_code}"
 
         # JSON ответ
         data = response.json()
